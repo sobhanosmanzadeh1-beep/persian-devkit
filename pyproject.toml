@@ -1,0 +1,85 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "persian-devkit"
+version =  "1.0.0"
+description = "جعبه‌ابزار خط فرمان برای توسعه‌دهندگان فارسی‌زبان (تاریخ، عدد، متن، UUID، JSON)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "sobhan osman zadeh", email = "sobhanosmanzadeh1@gmail.com" },
+]
+keywords = ["persian", "farsi", "cli", "jalali", "shamsi", "developer-tools", "devkit"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Persian",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+dependencies = [
+    "typer>=0.12.0",
+    "rich>=13.7.0",
+    "jdatetime>=4.1.0",
+    "python-bidi>=0.4.2",
+    "qrcode>=7.4.2",
+    "pillow>=10.0.0",
+    "pyyaml>=6.0.1",
+    "tomli>=2.0.1; python_version < '3.11'",
+    "tomli-w>=1.0.0",
+]
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "build>=1.2",
+    "twine>=5.1",
+]
+
+[project.scripts]
+pdev = "persian_devkit.main:app"
+
+[project.urls]
+Homepage = "https://github.com/your-username/persian-devkit"
+Repository = "https://github.com/your-username/persian-devkit"
+Issues = "https://github.com/your-username/persian-devkit/issues"
+Changelog = "https://github.com/your-username/persian-devkit/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["persian_devkit"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/persian_devkit",
+    "/tests",
+    "/README.md",
+    "/LICENSE.txt",
+    "/pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --cov=persian_devkit --cov-report=term-missing --cov-fail-under=80"
+
+[tool.coverage.run]
+source = ["persian_devkit"]
+omit = ["*/tests/*", "*/__main__.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+]
