@@ -3,8 +3,8 @@ from __future__ import annotations
 
 import typer
 from persian_devkit.commands import (
-    base64_cmd, calendar_cmd, color_cmd, count_cmd, csv_cmd,
-    csvquery_cmd, date_cmd, dns_cmd, env_cmd, extract_cmd,
+    automation_cmd, base64_cmd, calendar_cmd, color_cmd, count_cmd,
+    csv_cmd, csvquery_cmd, date_cmd, dns_cmd, env_cmd, extract_cmd,
     fa_cmd, frequency_cmd, gitignore_cmd, hash_cmd, hijri_cmd,
     http_cmd, image_cmd, ip_cmd, jq_cmd, json_cmd, license_cmd,
     lorem_cmd, name_cmd, number_cmd, numerals_cmd, password_cmd,
@@ -90,5 +90,8 @@ def register_commands(app: typer.Typer) -> None:
     app.command(name="scaffold", help="  ساخت پروژه از قالب.")(scaffold_command)
     app.command(name="template", help=" رندر قالب.")(template_command)
 
-        # امنیت (Batch 11)
+    # خودکارسازی (Batch 14)
+    app.add_typer(automation_cmd.app, name="auto", help=" خودکارسازی: repeat, batch, watch.")
+
+    # امنیت (Batch 11)
     app.add_typer(security_cmd.app, name="security", help=" امنیت: JWT، رمز، گواهی.")
