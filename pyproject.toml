@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "persian-devkit"
-version =  "1.0.0"
+version =  "1.0.1"
 description = "جعبه‌ابزار خط فرمان برای توسعه‌دهندگان فارسی‌زبان (تاریخ، عدد، متن، UUID، JSON)"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -51,10 +51,11 @@ dev = [
 pdev = "persian_devkit.main:app"
 
 [project.urls]
-Homepage = "https://github.com/your-username/persian-devkit"
-Repository = "https://github.com/your-username/persian-devkit"
-Issues = "https://github.com/your-username/persian-devkit/issues"
-Changelog = "https://github.com/your-username/persian-devkit/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/sobhanosmanzadeh1-beep/persian-devkit"
+Repository = "https://github.com/sobhanosmanzadeh1-beep/persian-devkit"
+Issues = "https://github.com/sobhanosmanzadeh1-beep/persian-devkit/issues"
+Changelog = "https://github.com/sobhanosmanzadeh1-beep/persian-devkit/blob/main/CHANGELOG.md"
+Documentation = "https://github.com/sobhanosmanzadeh1-beep/persian-devkit#readme"
 
 [tool.hatch.build.targets.wheel]
 packages = ["persian_devkit"]

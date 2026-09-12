@@ -23,6 +23,12 @@
 
 ---
 
+[![PyPI](https://img.shields.io/pypi/v/persian-devkit.svg)](https://pypi.org/project/persian-devkit/)
+[![Python](https://img.shields.io/pypi/pyversions/persian-devkit.svg)](https://pypi.org/project/persian-devkit/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
+[![CI](https://github.com/sobhanosmanzadeh1-beep/persian-devkit/actions/workflows/ci.yml/badge.svg)](https://github.com/sobhanosmanzadeh1-beep/persian-devkit/actions/workflows/ci.yml)
+[![GitHub stars](https://img.shields.io/github/stars/sobhanosmanzadeh1-beep/persian-devkit.svg)](https://github.com/sobhanosmanzadeh1-beep/persian-devkit/stargazers)
+
 ## نصب
 
 **نسخهٔ فعلی:** 1.0.0 — پایدار

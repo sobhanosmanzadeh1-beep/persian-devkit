@@ -4,7 +4,11 @@
 
 قالب بر اساس [Keep a Changelog](https://keepachangelog.com/fa/1.1.0/) است،
 و این پروژه از [Semantic Versioning](https://semver.org/lang/fa/) تبعیت می‌کند.
+## [1.0.1] — 2026-09-12
 
+### Changed
+- افزودن لینک‌های واقعی GitHub به metadata پکیج
+- بهبود مستندات و لینک‌های PyPI
 ## [1.0.0] — 2026-09-11
 
 ### Added
