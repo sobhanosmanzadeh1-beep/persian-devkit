@@ -3,15 +3,15 @@ from __future__ import annotations
 
 import typer
 from persian_devkit.commands import (
-    automation_cmd, base64_cmd, calendar_cmd, color_cmd, count_cmd,
-    csv_cmd, csvquery_cmd, date_cmd, dns_cmd, env_cmd, extract_cmd,
-    fa_cmd, frequency_cmd, gitignore_cmd, hash_cmd, hijri_cmd,
-    http_cmd, image_cmd, ip_cmd, jq_cmd, json_cmd, license_cmd,
-    lorem_cmd, name_cmd, number_cmd, numerals_cmd, password_cmd,
-    ping_cmd, port_cmd, qrcode_cmd, random_cmd, scaffold_cmd,
-    security_cmd, sort_cmd, sqlite_cmd, sys_cmd, template_cmd,
-    text_cmd, time_cmd, toml_cmd, translit_cmd, uniq_cmd, url_cmd,
-    uuid_cmd, yaml_cmd,
+    audio_cmd, automation_cmd, base64_cmd, calendar_cmd, color_cmd,
+    count_cmd, csv_cmd, csvquery_cmd, date_cmd, dns_cmd, env_cmd,
+    extract_cmd, fa_cmd, frequency_cmd, gitignore_cmd, hash_cmd,
+    hijri_cmd, http_cmd, image_cmd, ip_cmd, jq_cmd, json_cmd,
+    license_cmd, lorem_cmd, name_cmd, number_cmd, numerals_cmd,
+    password_cmd, pdf_cmd, ping_cmd, port_cmd, qrcode_cmd,
+    random_cmd, scaffold_cmd, security_cmd, sort_cmd, sqlite_cmd,
+    sys_cmd, template_cmd, text_cmd, time_cmd, toml_cmd,
+    translit_cmd, uniq_cmd, url_cmd, uuid_cmd, yaml_cmd,
 )
 from persian_devkit.commands.jq_cmd import jq_command
 from persian_devkit.commands.scaffold_cmd import scaffold_command
@@ -79,6 +79,10 @@ def register_commands(app: typer.Typer) -> None:
     app.add_typer(color_cmd.app, name="color", help=" رنگ.")
     app.add_typer(image_cmd.app, name="image", help="  تصویر.")
     app.command(name="qrcode", help=" QR Code.")(qrcode_cmd.qrcode_command)
+
+    # رسانه (Batch 15)
+    app.add_typer(pdf_cmd.app, name="pdf", help="📄 کار با PDF.")
+    app.add_typer(audio_cmd.app, name="audio", help="🎵 متادیتای فایل صوتی.")
 
     # نمونه
     app.add_typer(lorem_cmd.app, name="lorem", help=" متن نمونه.")
