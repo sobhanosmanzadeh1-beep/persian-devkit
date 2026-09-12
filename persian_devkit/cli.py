@@ -2,14 +2,15 @@
 from __future__ import annotations
 
 import typer
-
 from persian_devkit.commands import (
-    base64_cmd, calendar_cmd, color_cmd, csv_cmd, date_cmd, env_cmd,
-    gitignore_cmd, hash_cmd, hijri_cmd, image_cmd, jq_cmd, json_cmd,
-    license_cmd, lorem_cmd, name_cmd, number_cmd, numerals_cmd,
-    password_cmd, qrcode_cmd, random_cmd, scaffold_cmd, sort_cmd,
+    base64_cmd, calendar_cmd, color_cmd, count_cmd, csv_cmd, date_cmd,
+    dns_cmd, env_cmd, extract_cmd, frequency_cmd, gitignore_cmd,
+    hash_cmd, hijri_cmd, http_cmd, image_cmd, ip_cmd, jq_cmd,
+    json_cmd, license_cmd, lorem_cmd, name_cmd, number_cmd,
+    numerals_cmd, password_cmd, ping_cmd, port_cmd, qrcode_cmd,
+    random_cmd, scaffold_cmd, security_cmd, sort_cmd, sys_cmd,
     template_cmd, text_cmd, time_cmd, toml_cmd, translit_cmd,
-    url_cmd, uuid_cmd, yaml_cmd,ip_cmd, dns_cmd, port_cmd, http_cmd, ping_cmd ,count_cmd, frequency_cmd, uniq_cmd, extract_cmd, sys_cmd
+    uniq_cmd, url_cmd, uuid_cmd, yaml_cmd,
 )
 from persian_devkit.commands.jq_cmd import jq_command
 from persian_devkit.commands.scaffold_cmd import scaffold_command
@@ -19,7 +20,7 @@ from persian_devkit.commands.template_cmd import template_command
 def register_commands(app: typer.Typer) -> None:
     """همهٔ زیرفرمان‌ها را به اپ اضافه می‌کند."""
     # سیستم (Batch 10)
-    app.add_typer(sys_cmd.app, name="sys", help="💻 اطلاعات سیستم.")
+    app.add_typer(sys_cmd.app, name="sys", help=" اطلاعات سیستم.")
     # تاریخ و زمان
     app.add_typer(date_cmd.app, name="date", help=" تاریخ شمسی/میلادی.")
     app.add_typer(hijri_cmd.app, name="hijri", help=" تاریخ قمری.")
@@ -80,3 +81,6 @@ def register_commands(app: typer.Typer) -> None:
     app.add_typer(gitignore_cmd.app, name="gitignore", help=" .gitignore.")
     app.command(name="scaffold", help="  ساخت پروژه از قالب.")(scaffold_command)
     app.command(name="template", help=" رندر قالب.")(template_command)
+
+        # امنیت (Batch 11)
+    app.add_typer(security_cmd.app, name="security", help=" امنیت: JWT، رمز، گواهی.")
