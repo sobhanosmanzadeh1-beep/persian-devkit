@@ -5,13 +5,13 @@ import typer
 from persian_devkit.commands import (
     base64_cmd, calendar_cmd, color_cmd, count_cmd, csv_cmd,
     csvquery_cmd, date_cmd, dns_cmd, env_cmd, extract_cmd,
-    frequency_cmd, gitignore_cmd, hash_cmd, hijri_cmd, http_cmd,
-    image_cmd, ip_cmd, jq_cmd, json_cmd, license_cmd, lorem_cmd,
-    name_cmd, number_cmd, numerals_cmd, password_cmd, ping_cmd,
-    port_cmd, qrcode_cmd, random_cmd, scaffold_cmd, security_cmd,
-    sort_cmd, sqlite_cmd, sys_cmd, template_cmd, text_cmd,
-    time_cmd, toml_cmd, translit_cmd, uniq_cmd, url_cmd, uuid_cmd,
-    yaml_cmd,
+    fa_cmd, frequency_cmd, gitignore_cmd, hash_cmd, hijri_cmd,
+    http_cmd, image_cmd, ip_cmd, jq_cmd, json_cmd, license_cmd,
+    lorem_cmd, name_cmd, number_cmd, numerals_cmd, password_cmd,
+    ping_cmd, port_cmd, qrcode_cmd, random_cmd, scaffold_cmd,
+    security_cmd, sort_cmd, sqlite_cmd, sys_cmd, template_cmd,
+    text_cmd, time_cmd, toml_cmd, translit_cmd, uniq_cmd, url_cmd,
+    uuid_cmd, yaml_cmd,
 )
 from persian_devkit.commands.jq_cmd import jq_command
 from persian_devkit.commands.scaffold_cmd import scaffold_command
@@ -33,7 +33,10 @@ def register_commands(app: typer.Typer) -> None:
     app.add_typer(translit_cmd.app, name="transliterate", help=" فارسی ↔ فینگلیش.")
     app.add_typer(sort_cmd.app, name="sort", help=" مرتب‌سازی با الفبای فارسی.")
 
-        # متن پیشرفته (Batch 9)
+    # فارسی پیشرفته (Batch 13)
+    app.add_typer(fa_cmd.app, name="fa", help="🇮🇷 ابزارهای پیشرفتهٔ فارسی.")
+
+    # متن پیشرفته (Batch 9)
     app.add_typer(count_cmd.app, name="count", help=" شمارش خط/کلمه/کاراکتر.")
     app.add_typer(frequency_cmd.app, name="frequency", help=" کلمات پرتکرار.")
     app.add_typer(uniq_cmd.app, name="uniq", help=" حذف تکراری‌ها.")
