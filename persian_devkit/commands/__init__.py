@@ -5,9 +5,9 @@ from persian_devkit.commands import (
     hash_cmd, hijri_cmd, http_cmd, image_cmd, ip_cmd, jq_cmd,
     json_cmd, license_cmd, lorem_cmd, name_cmd, number_cmd,
     numerals_cmd, password_cmd, ping_cmd, port_cmd, qrcode_cmd,
-    random_cmd, scaffold_cmd, sort_cmd, template_cmd, text_cmd,
-    time_cmd, toml_cmd, translit_cmd, uniq_cmd, url_cmd, uuid_cmd,
-    yaml_cmd,
+    random_cmd, scaffold_cmd, sort_cmd, sys_cmd, template_cmd,
+    text_cmd, time_cmd, toml_cmd, translit_cmd, uniq_cmd, url_cmd,
+    uuid_cmd, yaml_cmd,
 )
 
 __all__ = [
@@ -18,5 +18,5 @@ __all__ = [
     "name_cmd", "number_cmd", "numerals_cmd", "password_cmd",
     "ping_cmd", "port_cmd", "qrcode_cmd", "random_cmd", "scaffold_cmd",
     "sort_cmd", "template_cmd", "text_cmd", "time_cmd", "toml_cmd",
-    "translit_cmd", "uniq_cmd", "url_cmd", "uuid_cmd", "yaml_cmd",
+    "translit_cmd", "uniq_cmd", "url_cmd", "uuid_cmd", "yaml_cmd","sys_cmd",
 ]
