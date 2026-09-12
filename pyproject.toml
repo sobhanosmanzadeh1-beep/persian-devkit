@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "persian-devkit"
-version =  "1.0.1"
+version =  "1.1.0"
 description = "جعبه‌ابزار خط فرمان برای توسعه‌دهندگان فارسی‌زبان (تاریخ، عدد، متن، UUID، JSON)"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -28,6 +28,7 @@ classifiers = [
     "Topic :: Utilities",
 ]
 
+
 dependencies = [
     "typer>=0.12.0",
     "rich>=13.7.0",
@@ -36,8 +37,8 @@ dependencies = [
     "qrcode>=7.4.2",
     "pillow>=10.0.0",
     "pyyaml>=6.0.1",
-    "tomli>=2.0.1; python_version < '3.11'",
     "tomli-w>=1.0.0",
+    "hijridate>=2.3.0",
 ]
 [project.optional-dependencies]
 dev = [
