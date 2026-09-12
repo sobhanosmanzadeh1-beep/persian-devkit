@@ -9,7 +9,7 @@ from persian_devkit.commands import (
     license_cmd, lorem_cmd, name_cmd, number_cmd, numerals_cmd,
     password_cmd, qrcode_cmd, random_cmd, scaffold_cmd, sort_cmd,
     template_cmd, text_cmd, time_cmd, toml_cmd, translit_cmd,
-    url_cmd, uuid_cmd, yaml_cmd,
+    url_cmd, uuid_cmd, yaml_cmd,ip_cmd, dns_cmd, port_cmd, http_cmd, ping_cmd
 )
 from persian_devkit.commands.jq_cmd import jq_command
 from persian_devkit.commands.scaffold_cmd import scaffold_command
@@ -50,6 +50,13 @@ def register_commands(app: typer.Typer) -> None:
 
     # وب
     app.add_typer(url_cmd.app, name="url", help=" URL.")
+
+        # شبکه (Batch 8)
+    app.add_typer(ip_cmd.app, name="ip", help=" IP و اطلاعات شبکه.")
+    app.add_typer(dns_cmd.app, name="dns", help=" جستجوی DNS.")
+    app.add_typer(port_cmd.app, name="port", help=" بررسی پورت.")
+    app.add_typer(http_cmd.app, name="http", help=" درخواست HTTP.")
+    app.add_typer(ping_cmd.app, name="ping", help=" ping هاست.")
 
     # بصری
     app.add_typer(color_cmd.app, name="color", help=" رنگ.")
