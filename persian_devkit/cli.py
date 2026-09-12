@@ -3,14 +3,15 @@ from __future__ import annotations
 
 import typer
 from persian_devkit.commands import (
-    base64_cmd, calendar_cmd, color_cmd, count_cmd, csv_cmd, date_cmd,
-    dns_cmd, env_cmd, extract_cmd, frequency_cmd, gitignore_cmd,
-    hash_cmd, hijri_cmd, http_cmd, image_cmd, ip_cmd, jq_cmd,
-    json_cmd, license_cmd, lorem_cmd, name_cmd, number_cmd,
-    numerals_cmd, password_cmd, ping_cmd, port_cmd, qrcode_cmd,
-    random_cmd, scaffold_cmd, security_cmd, sort_cmd, sys_cmd,
-    template_cmd, text_cmd, time_cmd, toml_cmd, translit_cmd,
-    uniq_cmd, url_cmd, uuid_cmd, yaml_cmd,
+    base64_cmd, calendar_cmd, color_cmd, count_cmd, csv_cmd,
+    csvquery_cmd, date_cmd, dns_cmd, env_cmd, extract_cmd,
+    frequency_cmd, gitignore_cmd, hash_cmd, hijri_cmd, http_cmd,
+    image_cmd, ip_cmd, jq_cmd, json_cmd, license_cmd, lorem_cmd,
+    name_cmd, number_cmd, numerals_cmd, password_cmd, ping_cmd,
+    port_cmd, qrcode_cmd, random_cmd, scaffold_cmd, security_cmd,
+    sort_cmd, sqlite_cmd, sys_cmd, template_cmd, text_cmd,
+    time_cmd, toml_cmd, translit_cmd, uniq_cmd, url_cmd, uuid_cmd,
+    yaml_cmd,
 )
 from persian_devkit.commands.jq_cmd import jq_command
 from persian_devkit.commands.scaffold_cmd import scaffold_command
@@ -56,6 +57,10 @@ def register_commands(app: typer.Typer) -> None:
     app.add_typer(csv_cmd.app, name="csv", help=" CSV.")
     app.add_typer(env_cmd.app, name="env", help=" .env.")
     app.command(name="jq", help=" کوئری JSON.")(jq_command)
+
+    # دیتابیس (Batch 12)
+    app.add_typer(sqlite_cmd.app, name="sqlite", help="  کار با SQLite.")
+    app.add_typer(csvquery_cmd.app, name="csv-query", help=" کوئری SQL روی CSV.")
 
     # وب
     app.add_typer(url_cmd.app, name="url", help=" URL.")
