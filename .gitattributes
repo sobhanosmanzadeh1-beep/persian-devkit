@@ -1,0 +1,25 @@
+# تنظیمات Git برای پروژه
+* text=auto eol=lf
+
+# فایل‌های متنی
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+
+# فایل‌های باینری
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.whl binary
+*.gz binary
+*.zip binary
+
+# تشخیص زبان در GitHub
+*.py linguist-language=Python

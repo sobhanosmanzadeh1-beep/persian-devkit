@@ -20,6 +20,10 @@ from persian_devkit.commands.scaffold_cmd import scaffold_command
 from persian_devkit.commands.shell_cmd import shell_command
 from persian_devkit.commands.template_cmd import template_command
 from persian_devkit.utils.plugin_utils import register_plugins
+from persian_devkit.commands.doctor_cmd import doctor_command
+from persian_devkit.commands.version_cmd import version_command
+from persian_devkit.commands.info_cmd import info_command
+from persian_devkit.commands.upgrade_cmd import upgrade_command
 
 
 def register_commands(app: typer.Typer) -> None:
@@ -96,3 +100,8 @@ def register_commands(app: typer.Typer) -> None:
 
     # بارگذاری پلاگین‌های کاربر
     register_plugins(app)
+    # v2.1.0 — self-management
+    app.command(name="doctor", help=" بررسی سلامت نصب.")(doctor_command)
+    app.command(name="version", help="🏷  اطلاعات نسخه.")(version_command)
+    app.command(name="info", help="ℹ️  اطلاعات کامل pdev.")(info_command)
+    app.command(name="upgrade", help="⬆️  ارتقای pdev.")(upgrade_command)

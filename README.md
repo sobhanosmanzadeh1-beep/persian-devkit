@@ -1,13 +1,16 @@
 # persian-devkit
+# 🧰 persian-devkit
 
-> جعبه‌ابزار خط فرمان برای توسعه‌دهندگان فارسی‌زبان — تاریخ، عدد، متن، UUID و JSON در یک CLI سریع و زیبا.
+> جعبه‌ابزار خط فرمان برای توسعه‌دهندگان فارسی‌زبان — ۶۶ دستور برای تاریخ، متن، داده، شبکه و ...
 
-[![PyPI](https://img.shields.io/badge/pypi-persian--devkit-blue)](https://pypi.org/project/persian-devkit/)
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Tests](https://img.shields.io/badge/tests-319%20passing-brightgreen)
-![Coverage](https://img.shields.io/badge/coverage-91%25-brightgreen)
+[![PyPI](https://img.shields.io/pypi/v/persian-devkit.svg)](https://pypi.org/project/persian-devkit/)
+[![Python](https://img.shields.io/pypi/pyversions/persian-devkit.svg)](https://pypi.org/project/persian-devkit/)
+[![Downloads](https://img.shields.io/pypi/dm/persian-devkit.svg)](https://pypistats.org/packages/persian-devkit)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
+[![Tests](https://img.shields.io/badge/tests-607%20passed-brightgreen)](https://github.com/sobhanosmanzadeh1-beep/persian-devkit/actions)
+[![Coverage](https://img.shields.io/badge/coverage-82%25-brightgreen)](https://github.com/sobhanosmanzadeh1-beep/persian-devkit)
+[![GitHub stars](https://img.shields.io/github/stars/sobhanosmanzadeh1-beep/persian-devkit.svg?style=social)](https://github.com/sobhanosmanzadeh1-beep/persian-devkit/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/sobhanosmanzadeh1-beep/persian-devkit.svg)](https://github.com/sobhanosmanzadeh1-beep/persian-devkit/issues)
 ---
 
 ##  چرا persian-devkit؟
@@ -64,6 +67,34 @@ pdev uuid new --count 3
 ---
 
 ##  دستورات
+
+### 🩺 دستورات خود‌مدیریتی (v2.1.0)
+
+```bash
+# بررسی سلامت نصب و محیط
+$ pdev doctor
+╭─ 🩺 بررسی سلامت persian-devkit ─╮
+│                                  │
+╰──────────────────────────────────╯
+┌─────┬────────────────────┬──────────────────┐
+│  ✓  │ Python version     │ Python 3.11.9    │
+│  ✓  │ Package            │ 2.1.0 نصب است    │
+│  ✓  │ Encoding           │ UTF-8 فعال       │
+│  ⚠  │ Config file        │ وجود ندارد       │
+└─────┴────────────────────┴──────────────────┘
+
+# اطلاعات کامل pdev و سیستم
+$ pdev info
+$ pdev info -v
+
+# اطلاعات دقیق نسخه
+$ pdev version
+$ pdev version --short
+
+# بررسی و ارتقا
+$ pdev upgrade --check
+$ pdev upgrade --yes
+```
 
 
 ### 🔐 `pdev base64` — رمزگذاری و رمزگشایی
